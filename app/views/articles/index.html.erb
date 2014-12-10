@@ -1,0 +1,20 @@
+<h1>index</h1>
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Text</th>
+    <th>ID</th>
+  </tr>
+
+  <% @articles.each do |article| %>
+    <tr>
+      <td><%= article.title %></td>
+      <td><%= article.text %></td>
+      <td><%= article.id %></td>
+      <td><%= link_to 'Edit', edit_article_path(article) %></td>
+    </tr>
+  <% end %>
+</table>
+
+
+
